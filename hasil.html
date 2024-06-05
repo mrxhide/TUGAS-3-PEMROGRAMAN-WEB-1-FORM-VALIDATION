@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Formulir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        h2 {
+            display: flex;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .data-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .data-list li {
+            margin-bottom: 10px;
+        }
+        .data-list li strong {
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hasil Formulir</h2>
+        <ul class="data-list">
+            <li><strong>Nama Depan:</strong> <span id="firstName"></span></li>
+            <li><strong>Nama Belakang:</strong> <span id="lastName"></span></li>
+            <li><strong>Username:</strong> <span id="username"></span></li>
+            <li><strong>Password:</strong> <span id="password"></span></li>
+            <li><strong>Nama Sesuai KTP:</strong> <span id="namaKTP"></span></li>
+            <li><strong>NIK:</strong> <span id="nik"></span></li>
+            <li><strong>Negara:</strong> <span id="negara"></span></li>
+            <li><strong>Agama:</strong> <span id="agama"></span></li>
+            <li><strong>Jabatan:</strong> <span id="jabatan"></span></li>
+            <li><strong>Status Perkawinan:</strong> <span id="statusPerkawinan"></span></li>
+            <li><strong>Jenis Kelamin:</strong> <span id="jenisKelamin"></span></li>
+            <li><strong>Alamat Sesuai KTP:</strong> <span id="alamatKTP"></span></li>
+            <li><strong>Alamat Sekarang:</strong> <span id="alamatSekarang"></span></li>
+            <li><strong>Tempat Lahir:</strong> <span id="tempatLahir"></span></li>
+            <li><strong>Tanggal Lahir:</strong> <span id="tanggalLahir"></span></li>
+        </ul>
+    </div>
+
+    <script>
+        // Ambil data dari localStorage
+        var formData = JSON.parse(localStorage.getItem('formData'));
+
+        // Tampilkan data pada halaman hasil
+        document.getElementById('firstName').innerText = formData.firstName;
+        document.getElementById('lastName').innerText = formData.lastName;
+        document.getElementById('username').innerText = formData.username;
+        document.getElementById('password').innerText = formData.password;
+        document.getElementById('namaKTP').innerText = formData.namaKTP;
+        document.getElementById('nik').innerText = formData.nik;
+        document.getElementById('negara').innerText = formData.negara;
+        document.getElementById('agama').innerText = formData.agama;
+        document.getElementById('jabatan').innerText = formData.jabatan;
+        document.getElementById('statusPerkawinan').innerText = formData.statusPerkawinan;
+        document.getElementById('jenisKelamin').innerText = formData.jenisKelamin;
+        document.getElementById('alamatKTP').innerText = formData.alamatKTP;
+        document.getElementById('alamatSekarang').innerText = formData.alamatSekarang;
+        document.getElementById('tempatLahir').innerText = formData.tempatLahir;
+        document.getElementById('tanggalLahir').innerText = formData.tanggalLahir;
+        document.addEventListener('DOMContentLoaded', function() {
+        });
+        
+    </script>
+
+</body>
+</html>
